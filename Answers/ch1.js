@@ -7,7 +7,7 @@ const checkunique = str => {
 
 	for (var i = 0; i < str.length; i++) {
 		console.log("val: " + str[i]);
-		
+
 		if (allChars[str[i]]){
 			console.log("char exists: " + str[i] + "\n");
 			return false
@@ -28,3 +28,7 @@ checkunique("abcdefghijk");
 checkunique("abcdedc");
 checkunique("lool");
 checkunique("jimlpotreae");
+//runs at O(n)
+
+
+console.log("2:  ");
