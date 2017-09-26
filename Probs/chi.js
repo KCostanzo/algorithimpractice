@@ -89,65 +89,93 @@
 
 //
 
-console.log("5:  \n");
+// console.log("5:  \n");
 
 
-const check1 = (str1, str2) => {
+// const check1 = (str1, str2) => {
 
-	const check1dif = (str1, str2) =>	{
+// 	const check1dif = (str1, str2) =>	{
 
-		var diffVar = 0;
-		for (var j = 0; j < str1.length; j++) {
-			if (!str2.includes(str1[j])) {
-				console.log("str2 not includes");
-				diffVar += 1;
-			}
+// 		var diffVar = 0;
+// 		for (var j = 0; j < str1.length; j++) {
+// 			if (!str2.includes(str1[j])) {
+// 				console.log("str2 not includes");
+// 				diffVar += 1;
+// 			}
 
-			if (diffVar > 1) {
-				console.log("diffvar > 1");
-				return false;
-			}
-		}
-		console.log("true - 1 dif length");
-		return true;
-	};
+// 			if (diffVar > 1) {
+// 				console.log("diffvar > 1");
+// 				return false;
+// 			}
+// 		}
+// 		console.log("true - 1 dif length");
+// 		return true;
+// 	};
 
-	const equalCheck = (str1,str2) => {
-		var eqTracker = 0;
-		for (var i = 0; i < str1.length; i++) {
-			if (str1[i] !== str2[i]) {
-				console.log("non equal char, 1 edit");
-				eqTracker += 1;
-			}
-		}
+// 	const equalCheck = (str1,str2) => {
+// 		var eqTracker = 0;
+// 		for (var i = 0; i < str1.length; i++) {
+// 			if (str1[i] !== str2[i]) {
+// 				console.log("non equal char, 1 edit");
+// 				eqTracker += 1;
+// 			}
+// 		}
 
-		if (eqTracker > 1) {
-			console.log("eqCheck > 1\n ");
-			return false;
-		}
-		console.log("true");
-		return true;
+// 		if (eqTracker > 1) {
+// 			console.log("eqCheck > 1\n ");
+// 			return false;
+// 		}
+// 		console.log("true");
+// 		return true;
+// 	}
+
+// 	if (str1.length === str2.length) {
+// 		console.log("equal length");
+// 		return(equalCheck(str1,str2));
+// 	} else if ((str1.length + 1) === str2.length) {
+// 		console.log("second string greater");
+// 		return(check1dif(str1,str2));
+// 	} else if ((str1.length - 1 ) === str2.length) {
+// 		console.log("first string greater");
+// 		return(check1dif(str2,str1));
+// 	}
+
+// 	console.log("trtue \n");
+// 	return true;
+// }
+
+
+
+
+// check1("pale","ple"); //true
+// check1("pales","pale"); //true
+// check1("pale","bale"); //true
+// check1("pale","bake"); //false
+
+
+// console.log("5: \n");
+
+
+// const rotateMatrix = mtrx => {
+
+
+	
+// }
+
+
+//console.log("Zero Matricx: \n");
+
+const zeromatrix = mxnarr => {
+
+	let known0arr = [];
+	let known0obj = {};
+
+	for (let i = 0; i < mxnarr.length; i++) {
+		
 	}
 
-	if (str1.length === str2.length) {
-		console.log("equal length");
-		return(equalCheck(str1,str2));
-	} else if ((str1.length + 1) === str2.length) {
-		console.log("second string greater");
-		return(check1dif(str1,str2));
-	} else if ((str1.length - 1 ) === str2.length) {
-		console.log("first string greater");
-		return(check1dif(str2,str1));
-	}
-
-	console.log("trtue \n");
-	return true;
-}
 
 
+	return newMatrix;
 
-
-check1("pale","ple"); //true
-check1("pales","pale"); //true
-check1("pale","bale"); //true
-check1("pale","bake"); //false
+})
