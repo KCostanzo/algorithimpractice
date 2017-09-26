@@ -167,15 +167,52 @@
 
 const zeromatrix = mxnarr => {
 
-	let known0arr = [];
-	let known0obj = {};
+	// let known0arr = [];
+	let known0obj = {
+		knownxs: [],
+		knownys: []
+	};
 
 	for (let i = 0; i < mxnarr.length; i++) {
-		
+		for (let j = 0; j < mxnarr[i].length; j++) {
+			if (mxnarr[i][j] === 0) {
+				known0obj.knownxs.push(i);
+				known0obj.knownys.push(j);
+
+				console.log("working: " + i + " " + j);
+			}
+		}
 	}
 
+	// console.log(known0arr);
+	console.log(known0obj);
 
+	let newMatrix = mxnarr; //i would make a copy for real version
+	// console.log(newMatrix);
+
+	for (let i = 0; i < known0obj.knownxs.length; i++) {
+
+		let thisypos = known0obj.knownys[i];
+		let thisxpos = known0obj.knownxs[i];
+
+		//takes care of rows
+		for (let j = 0; j < mxnarr.length; j++) {
+			newMatrix[j][thisypos] = 0;
+			//check col
+			if (j === thisxpos) {
+				for (let z = 0; z < mxnarr[j].length; z++) {
+					newMatrix[j][z] = 0;
+				}
+			}
+		}
+	}
+	console.log(newMatrix);
 
 	return newMatrix;
 
-})
+};
+
+
+zeromatrix([[1,2,3],[0,1,2]]); //1,0 --> [[0,2,3],[0,0,0]]
+zeromatrix([[1,2],[2,3,4],[1,0]]); //2,1 --> [[1,0],[2,0,4],[0,0]]
+zeromatrix([[1,2,0],[2,3,4],[1,2,3]]); //should be 0,2 --> [[0,0,0],[2,3,0],[1,2,0]]
