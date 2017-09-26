@@ -24,11 +24,12 @@ const checkunique = str => {
 
 
 
-checkunique("abcdefghijk");
-checkunique("abcdedc");
-checkunique("lool");
-checkunique("jimlpotreae");
-//runs at O(n)
+// checkunique("abcdefghijk");
+// checkunique("abcdedc");
+// checkunique("lool");
+// checkunique("jimlpotreae");
+// //runs at O(n)
 
 
-console.log("2:  ");
+
+// console.log("2:  ");
