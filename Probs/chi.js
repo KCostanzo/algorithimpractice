@@ -167,7 +167,6 @@
 
 const zeromatrix = mxnarr => {
 
-	// let known0arr = [];
 	let known0obj = {
 		knownxs: [],
 		knownys: []
@@ -184,7 +183,6 @@ const zeromatrix = mxnarr => {
 		}
 	}
 
-	// console.log(known0arr);
 	console.log(known0obj);
 
 	let newMatrix = mxnarr; //i would make a copy for real version
@@ -209,7 +207,6 @@ const zeromatrix = mxnarr => {
 	console.log(newMatrix);
 
 	return newMatrix;
-
 };
 
 
